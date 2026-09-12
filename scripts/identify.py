@@ -6,7 +6,7 @@ from scripts.cipher import quick_encoding_check, is_hex, is_base32, is_base64, i
 
 cipher_id = CipherIdentifier()
 
-def identify_input(user_input, wordlist_path="/usr/share/wordlists/sanad.txt", timeout=15):
+def identify_input(user_input, wordlist_path="/usr/share/wordlists/rockyou.txt", timeout=15):
     user_input = user_input.strip()
 
     id_results = list(hid.identifyHash(user_input))
