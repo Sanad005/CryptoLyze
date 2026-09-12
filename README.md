@@ -107,19 +107,10 @@ options:
 - **Ambiguous hash lengths.** Several hash types share the same output length and charset (e.g. MD5, MD4, MD2, NTLM, and Double MD5 are all 32 hex characters), so multiple candidates may be listed for a single hash. The tool tries the most common ones first but can't definitively distinguish between them from the string alone.
 - **Classical cipher detection is statistical, not certain.** Chi-squared scoring gives a best guess, not a guarantee — short ciphertext samples in particular can produce unreliable frequency analysis.
 
-## Roadmap / possible future additions
 
-- Salted hash cracking (bcrypt, crypt-family formats)
-- Vigenère key-length recovery via Kasiski examination + per-stream key solving
-- Additional classical ciphers: Atbash, Rail Fence, Playfair
-- Recursive decoding (e.g. detect Base64, decode it, then re-run identification on the decoded content)
-- `--no-crack` flag to identify hash type without attempting to crack it
-- Multiprocessing support for faster wordlist cracking on large lists
 
 ## Disclaimer
 
 This tool is intended for educational purposes, CTF challenges, and authorized security testing only. Only use it against hashes and data you own or have explicit permission to test. Unauthorized use against systems or data you don't own or have permission to access may be illegal.
 
-## License
 
-Add a license of your choice (e.g. MIT) before publishing — GitHub can generate one for you when creating the repo.
