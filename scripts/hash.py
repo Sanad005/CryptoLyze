@@ -4,7 +4,7 @@ from scripts.crack import crack_from_wordlist, HASHLIB_MAP
 
 hid = HashID()
 
-def hash_id(hash_value, wordlist_path="/usr/share/wordlists/sanad.txt", timeout=15):
+def hash_id(hash_value, wordlist_path="/usr/share/wordlists/rockyou.txt", timeout=15):
     id = hid.identifyHash(hash_value)
     print("possible hash types:")
     s = 1
